@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        .darkness {
+            background-color : black;
+            color : white;
+            font-family: sans-serif;
+        }
+        
+        .light {
+            background-color : orange;
+            color : blue;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body id="mainContent">
+    <img id="lightBulb" src="images/bulboff.gif" width="150px">
+
+    <div>
+        <button onClick="bulbon()">lights on</button>
+        
+        
+        <button onClick="bulboff()">lights off</button>
+         
+    </div>
+    
+    <div id = "status"></div>
+    
+
+
+    <script>
+    
+    let bulbImage = document.getElementById("lightBulb");
+    let statusText = document.getElementById("status");
+    let mainContent = document.getElementById("mainContent");
+    
+    
+        function bulbon() {
+            bulbImage.src = "images/bulbon.gif";
+            statusText.innerHTML="its too bright!";
+            mainContent.classList.remove("darkness");
+            mainContent.classList.add("light");
+        
+          
+            
+        }
+        
+
+        function bulboff() {
+            bulbImage.src = "images/bulboff.gif";
+            statusText.innerHTML="its dark!";
+            mainContent.classList.remove("light");
+            mainContent.classList.add("darkness");
+        
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+ <!--Your challenge is to modify the bulbon() and bulboff()-->
+   <!--functions so that the innerHTML of the status div changes.-->
+   <!--When the light is off, the div should contain a h2 with the-->
+   <!--text: "It's dark!!"-->
+   <!--When the light is on, the div should contain a h2 with the-->
+   <!--text: "It's too bright!!"-->
+
+
+
